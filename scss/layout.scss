@@ -1,0 +1,411 @@
+body {
+    //background-color: #000;
+    // &:after {
+    //     content: "";
+    //     position: absolute;
+    //     top: 0;
+    //     background: linear-gradient(to left,rgb(0, 0, 0),transparent);
+    //     width: 100%;
+    //     height: 100%;
+    // }
+    -ms-overflow-style: none;
+    font-family: 'Noto Sans', sans-serif;
+ }
+
+::-webkit-scrollbar {
+  display: none;
+}
+
+#header {
+    position: relative;
+    height: 100px;
+    .menu {
+        position: absolute;
+        font-size: 50px;
+        font-weight: 500;
+        right: 50px;
+        top: 30px;
+        cursor: pointer;
+        &.on {
+            display: none;
+        }
+    }
+    .close {
+        position: absolute;
+        font-size: 50px;
+        font-weight: 500;
+        right: 50px;
+        top: 30px;
+        cursor: pointer;
+        display: none;
+        &.on {
+            display: block;
+        }
+    }
+    #nav {
+        position: absolute;
+        top: -500px;
+        right: 200px;
+        display: flex;
+        transition: all 1.5s ease;
+        li {
+            margin-right: 120px;
+            font-size: 25px;
+            font-weight: 700;
+            &:nth-child(3) {
+                margin-right: 0;
+            }
+            &:hover {
+                color: orange;
+            }
+        }
+        &.on {
+            top: 40px;
+            transition: all 0.5s ease;
+        }
+    }
+}
+
+@keyframes slide03 {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+#main {
+    //background-color: #fff;
+    position: relative;
+    height: 1100px;
+    color: #000;
+    //border: 1px solid #fff;
+    .txtBox {
+        position: absolute;
+        top: 50%;
+        left: 100px;
+        transform: translateY(-50%);
+        animation: slide01 2s ease;
+        .mainTxt {
+            font-size: 90px;
+            font-weight: 700;
+            line-height: 1.2;
+        }
+        .subTxt {
+            padding-top: 100px;
+            font-size: 22px;
+            line-height: 1.2;
+        }
+    }
+    .imgBox {
+        position: absolute;
+        top: 50%;
+        right: 5%;
+        transform: translateY(-50%);
+        height: 500px;
+        display: flex;
+        animation: slide02 2s ease;
+        li {
+            position: relative;
+            cursor: pointer;
+            margin-right: 80px;
+            &:hover {
+                .select {
+                    display: block;
+                }
+                p {
+                    color: orange;
+                }
+            }
+            .select {
+                position: absolute;
+                top: -200px;
+                left: 85px;
+                font-size: 150px;
+                color: orange;
+                display: none;
+                &:nth-child(2) {
+                    color: red;
+                }
+            }
+            P {
+                text-align: center;
+                font-weight: 700;
+                font-size: 30px;
+                padding: 70px 0 0 70px;
+            }
+            img {
+                width: 250px;
+                height: 100%;
+            }
+        }
+    }
+}
+
+@keyframes slide01 {
+    from {
+        left: -500px;
+        opacity: 0;
+    }
+    to {
+        left: 100px;
+        opacity: 1;
+    }
+}
+
+@keyframes backSlide01 {
+    from {
+        left: 100px;
+        opacity: 1;
+    }
+    to {
+        left: -500px;
+        opacity: 0;
+    }
+}
+
+@keyframes slide02 {
+    from {
+        right: -500PX;
+        opacity: 0;
+    }
+    to {
+        right: 5%;
+        opacity: 1;
+    }
+}
+
+.connect {
+    position: fixed;
+    left: 100px;
+    // left: 50%;
+    // transform: translateX(-50%);
+    display: flex;
+    &.on {
+        p {
+            //color: orange;
+            opacity: 1;
+            font-size: 20px;
+        }
+        span {
+            color: orange;
+        }
+    }
+    p {
+        font-size: 20px;
+        opacity: 0;
+        cursor: pointer;
+        transition: all 0.5s ease;
+        &:nth-child(1) {
+            margin-right: 50px;
+        }
+    }
+}
+
+.intro {
+    position: relative;
+    height: 500px;
+    width: 95%;
+    display: flex;
+    margin: 300px auto;
+    .left {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        //color: orange;
+        left: 100px;
+        
+        p {
+            font-size: 250px;
+            font-weight: 700;
+        }
+    }
+    .right {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        right: 100px;
+        text-align: right;
+        line-height: 1.2;
+        .mainTxt {
+            font-size: 50px;
+            font-weight: 700;
+            margin-bottom: 30px;
+        }
+        .subTxt {
+            font-size: 20px;
+            margin-bottom: 50px;
+        }
+    }
+}
+
+@keyframes slide03 {
+    from {
+        right: -500px;
+        opacity: 0;
+    }
+    to {
+        right: 100px;
+        opacity: 1;
+    }
+}
+
+@keyframes backSlide03 {
+    from {
+        right: 100px;
+        opacity: 1;
+    }
+    to {
+        right: -500px;
+        opacity: 0;
+    }
+}
+
+.profile {
+    position: relative;
+    height: 500px;
+    width: 95%;
+    display: flex;
+    margin: 300px auto;
+    .left {
+        position: absolute;
+        left: 100px;
+        top: 50%;
+        transform: translateY(-50%);
+        text-align: left;
+        .mainTxt {
+            font-size: 50px;
+            font-weight: 700;
+            margin-bottom: 30px;
+        }
+        .subTxt {
+            font-size: 20px;
+            margin-bottom: 50px;
+        }
+    }
+    .right {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        //color: orange;
+        right: 100px;
+        
+        p {
+            font-size: 250px;
+            font-weight: 700;
+        }
+    }
+}
+
+@keyframes slide04 {
+    from {
+        left: -500px;
+        opacity: 0;
+    }
+    to {
+        left: 100px;
+        opacity: 1;
+    }
+}
+
+@keyframes backSlide04 {
+    from {
+        left: 100px;
+        opacity: 1;
+    }
+    to {
+        left: -500px;
+        opacity: 0;
+    }
+}
+
+.works {
+    position: relative;
+    height: 600px;
+    width: 95%;
+    display: flex;
+    margin: 300px auto;
+    .left {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        //color: orange;
+        left: 100px;
+        
+        p {
+            font-size: 250px;
+            font-weight: 700;
+        }
+    }
+    .right {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        right: 100px;
+        text-align: right;
+        line-height: 1.2;
+        .mainTxt {
+            font-size: 40px;
+            font-weight: 700;
+            margin-bottom: 30px;
+        }
+        .subTxt {
+            line-height: 1.5;
+            font-size: 20px;
+            margin-bottom: 50px;
+            a {
+                transition: all 0.5s ease;
+                &:hover {
+                    color: orange;
+                    transition: all 0.5s ease;
+                }
+            }
+        }
+    }
+}
+
+.skill {
+    margin-left: 200px;
+    .title {
+        font-size: 50px;
+        font-weight: 700;
+        margin-bottom: 50px;
+        line-height: 2;
+        border-bottom: 1px solid #000;
+    }
+    .list {
+        display: flex;
+        .txt01 {
+            font-size: 30px;
+            margin-bottom: 20px;
+        }
+        .txt02 {
+            font-size: 20px;
+        }
+        .left {
+            margin-right: 100px;
+            line-height: 1.4;
+        }
+        .right {
+            line-height: 1.4;
+        }
+    }
+    span {
+        font-size: 15px;
+        color: gray;
+    }
+}
+
+#footer {
+    position: relative;
+    height: 70px;
+    p {
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
+        color: gray;
+        text-align: center;
+        line-height: 1.2;
+    }
+}

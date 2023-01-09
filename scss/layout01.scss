@@ -1,0 +1,65 @@
+.container {
+    width: 100%;
+}
+
+#header {
+    width: 100vw;
+    height: 100px;
+    //background-color: rgb(44, 39, 39);
+    background: linear-gradient(to left,yellow,rgba(4, 179, 4, 0.89));
+    //position: fixed;
+    position: relative;
+    font-size: 20px;
+    font-weight: 700;
+    color: #000;
+    //color: #fff;
+    #logo {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        left: 100px;
+    }
+    #nav {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        right: 100px;
+        ul {
+            display: flex;
+            li {
+                margin-left: 60px;
+                transition: all 0.5s ease;
+                &:hover {
+                    color: rgb(168, 255, 6);
+                    font-size: 35px;
+                    transition: all 0.5s ease;
+                }
+            }
+        }
+    }
+}
+
+
+.section01 {
+    position: relative;
+    height: 1000px;
+    background: linear-gradient(to left,yellow,rgba(4, 179, 4, 0.89));
+    text-transform: uppercase;
+    .text {
+        position: absolute;
+        top: 50%;
+        left: 50px;
+        transform: translateY(-50%);
+        .title {
+            color: #fff;
+            font-size: 80px;
+            line-height: 1.2;
+            margin-bottom: 50px;
+        }
+        .sub {
+            color: rgb(238, 238, 238);
+            font-size: 20px;
+            line-height: 1.1;
+        }
+    }
+}
